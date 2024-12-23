@@ -72,6 +72,8 @@ This project addresses the challenges of urban solid waste management by utilizi
   - Create new features by looking back at previous time steps (e.g., daily or weekly trends).
 - **Window Size**:
   - Specify how far back to analyze data for temporal patterns.
+  ![Architecture](C:\Users\fawaz\OneDrive\Documents\GithubPR\IOTML\waste-management-prediction\images)
+
 
 ### **5. Evaluation Metrics**
 - **Precision, Recall, and F1-Score**: Assess the classification accuracy for bin statuses.
