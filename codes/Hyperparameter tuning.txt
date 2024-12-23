@@ -1,0 +1,30 @@
+from sklearn.metrics import accuracy_score
+from xgboost import XGBClassifier
+from optuna import Trial, TrialPruned
+
+def objective(trial):
+    try:
+        # Hyperparameter search space
+        params = {
+            'max_depth': trial.suggest_int('max_depth', 3, 10),
+            'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.1),
+            'n_estimators': trial.suggest_int('n_estimators', 50, 300)
+        }
+
+        # Train XGBoost model
+        model = XGBClassifier(**params)
+        model.fit(X_train, y_train)
+
+        # Evaluate the model
+        preds = model.predict(X_test)
+        accuracy = accuracy_score(y_test, preds)
+
+        # Prune trial if the score is too low
+        trial.report(accuracy, step=0)
+        if trial.should_prune():
+            raise TrialPruned()
+
+        return accuracy
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None

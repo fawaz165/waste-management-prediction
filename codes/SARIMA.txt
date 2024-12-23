@@ -1,0 +1,17 @@
+import numpy as np
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+# Calculate time series (average pixel intensity per image)
+time_series_data = np.mean(X_train, axis=1)  # Average pixel intensity per image
+
+# Train SARIMA model
+sarima_model = SARIMAX(time_series_data, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12))
+sarima_results = sarima_model.fit()
+
+# Forecast future values
+sarima_forecast = sarima_results.forecast(steps=len(y_test))  # Forecast for test set size
+print("SARIMA Forecast for Test Set:", sarima_forecast)
+
+# Normalize SARIMA outputs to match classification probabilities
+sarima_normalized = (sarima_forecast - sarima_forecast.min()) / (sarima_forecast.max() - sarima_forecast.min())
+print("Normalized SARIMA Forecast:", sarima_normalized)

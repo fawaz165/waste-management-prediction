@@ -1,0 +1,15 @@
+# Fit the model
+xgb_model.fit(X_train_scaled, y_train)
+
+# Predict on the test data
+y_pred = xgb_model.predict(X_test_scaled)
+y_pred_proba = xgb_model.predict_proba(X_test_scaled)[:, 1]  # For ROC-AUC
+
+# Evaluate the model's performance
+accuracy = accuracy_score(y_test, y_pred)
+roc_auc = roc_auc_score(y_test, y_pred_proba) if len(np.unique(y_test)) > 1 else None
+
+# Print the results
+print(f"XGBoost Accuracy: {accuracy:.4f}")
+if roc_auc:
+    print(f"XGBoost ROC-AUC: {roc_auc:.4f}")

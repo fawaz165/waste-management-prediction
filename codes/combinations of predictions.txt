@@ -1,0 +1,12 @@
+# Normalize SARIMA forecast to range [0, 1]
+sarima_normalized = (sarima_forecast - np.min(sarima_forecast)) / (np.max(sarima_forecast) - np.min(sarima_forecast))
+
+# Get class 1 probabilities from XGBoost
+xgb_probs = xgb_model.predict_proba(X_test)[:, 1]
+
+# Combine the predictions with adjustable weights
+sarima_weight = 0.4  # Weight for SARIMA
+xgb_weight = 0.6     # Weight for XGBoost
+
+# Weighted combination of SARIMA and XGBoost predictions
+combined_predictions = sarima_weight * sarima_normalized + xgb_weight * xgb_probs

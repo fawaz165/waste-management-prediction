@@ -1,0 +1,29 @@
+import os
+import numpy as np
+from PIL import Image
+
+def process_images(image_folder, image_size=(64, 64)):
+    images = []
+    labels = []
+    for file_name in os.listdir(image_folder):
+        if file_name.endswith(('.jpg', '.png', '.jpeg')):
+            # Load and resize the image
+            img = Image.open(os.path.join(image_folder, file_name)).convert('L')  # Convert to grayscale
+            img = img.resize(image_size)
+            img_array = np.array(img)
+            images.append(img_array)
+
+            # Assign labels based on 'r' and 'o' in the file names
+            if 'r' in file_name.lower():
+                labels.append(0)  # Class 0: "r" images
+            elif 'o' in file_name.lower():
+                labels.append(1)  # Class 1: "o" images
+            else:
+                raise ValueError(f"Unexpected file name format: {file_name}")
+    return np.array(images), np.array(labels)
+
+# Normalize pixel values and reshape
+X_train = X_train / 255.0  # Scale to [0, 1]
+X_train = X_train.reshape(X_train.shape[0], -1)  # Flatten for ML
+X_test = X_test / 255.0  # Scale to [0, 1]
+X_test = X_test.reshape(X_test.shape[0], -1)  # Flatten for ML
