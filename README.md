@@ -1,5 +1,9 @@
 # Harnessing Machine Learning for Real-Time Prediction and Optimization of Solid Waste Generation Patterns
 
+
+
+
+
 ## Overview
 This project addresses the challenges of urban solid waste management by utilizing machine learning (ML) techniques to develop a predictive and efficient waste management framework. Leveraging publicly available datasets from Kaggle, the project focuses on forecasting waste generation patterns to enhance resource utilization and reduce environmental impact.
 
@@ -51,7 +55,6 @@ This architecture demonstrates a practical application of IoT and machine learni
 ![Architecture Diagram](https://github.com/fawaz165/waste-management-prediction/blob/main/images/1.working%20mechanism.png)
 
 ---
-
 ## Key Features and Achievements
 
 ### **1. Data-Driven Approach**
@@ -63,14 +66,14 @@ This architecture demonstrates a practical application of IoT and machine learni
   - Forecasts seasonal and long-term trends in waste generation.
   - Handles temporal dependencies effectively for accurate predictions.
   
-  ![SARIMA Forecast](images/3.SARIMA Forcast dataset.png)
+  ![SARIMA Forecast](https://github.com/fawaz165/waste-management-prediction/blob/main/images/3.SARIMA%20Forcast%20dataset.png)
   *SARIMA Forecast Dataset*
 
 - **XGBoost (eXtreme Gradient Boosting)**:
   - Classifies waste levels and predicts volumes with high precision.
   - Employs advanced feature engineering and regularization techniques.
   
-  ![XGBoost](images/4.XGboost dataset.png)
+  ![XGBoost](https://github.com/fawaz165/waste-management-prediction/blob/main/images/4.XGboost%20dataset.png)
   *XGBoost Dataset*
 
 - **Meta-Regressor**:
@@ -81,7 +84,7 @@ This architecture demonstrates a practical application of IoT and machine learni
   - Automated hyperparameter tuning for SARIMA and XGBoost.
   - Optimized model performance across diverse scenarios, minimizing errors and maximizing predictive accuracy.
 
-  ![Optuna](images/5.Optuna dataset.png)
+  ![Optuna](https://github.com/fawaz165/waste-management-prediction/blob/main/images/5.Optuna%20dataset.png)
   *Optuna Dataset*
 
 ### **4. Decision Support**
@@ -90,26 +93,25 @@ This architecture demonstrates a practical application of IoT and machine learni
   - Supports strategic decision-making in waste collection and management.
 
 ---
-
 ## Evaluation Metrics
 - **Classification Precision**: Assess the classification accuracy for bin statuses.
   
-  ![Classification Precision](images/6.classification precision.png)
+  ![Classification Precision](https://github.com/fawaz165/waste-management-prediction/blob/main/images/6.classification%20precision.png)
   *Classification Precision*
 
 - **Optimization Efficiency**: Measure the efficiency of the optimization process.
   
-  ![Optimization Efficiency](images/7.optimization efficiency.png)
+  ![Optimization Efficiency](https://github.com/fawaz165/waste-management-prediction/blob/main/images/7.optimization%20efficiency.png)
   *Optimization Efficiency*
 
 - **Model Stability**: Evaluate the stability of the models over time.
   
-  ![Model Stability](images/8.model stability.png)
+  ![Model Stability](https://github.com/fawaz165/waste-management-prediction/blob/main/images/8.model%20stability.png)
   *Model Stability*
 
 - **Frequency Accuracy Metrics**: Assess the accuracy of frequency predictions.
   
-  ![Frequency Accuracy Metrics](images/9.frequecy accuracy matrics.png)
+  ![Frequency Accuracy Metrics](https://github.com/fawaz165/waste-management-prediction/blob/main/images/9.frequecy%20accuracy%20matrics.png)
   *Frequency Accuracy Metrics*
 
 ---
