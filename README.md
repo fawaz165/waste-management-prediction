@@ -3,6 +3,7 @@
 ## Overview
 This project addresses the challenges of urban solid waste management by utilizing machine learning (ML) techniques to develop a predictive and efficient waste management framework. Leveraging publicly available datasets from Kaggle, the project focuses on forecasting waste generation patterns to enhance resource utilization and reduce environmental impact.
 
+![Working mechanism](https://github.com/fawaz165/waste-management-prediction/blob/main/images/1.working%20mechanism.png)
 ---
 
 ## Key Features and Achievements
@@ -72,9 +73,6 @@ This project addresses the challenges of urban solid waste management by utilizi
   - Create new features by looking back at previous time steps (e.g., daily or weekly trends).
 - **Window Size**:
   - Specify how far back to analyze data for temporal patterns.
-
-![Working mechanism](https://github.com/fawaz165/waste-management-prediction/blob/main/images/1.working%20mechanism.png)
-
 
 ### **5. Evaluation Metrics**
 - **Precision, Recall, and F1-Score**: Assess the classification accuracy for bin statuses.
