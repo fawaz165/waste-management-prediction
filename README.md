@@ -73,6 +73,8 @@ This project addresses the challenges of urban solid waste management by utilizi
 - **Window Size**:
   - Specify how far back to analyze data for temporal patterns.
 
+![System Model](https://github.com/fawaz165/waste-management-prediction/blob/main/images/1.working%20mechanism.png)
+
 
 ### **5. Evaluation Metrics**
 - **Precision, Recall, and F1-Score**: Assess the classification accuracy for bin statuses.
